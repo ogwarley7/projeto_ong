@@ -1,0 +1,445 @@
+/* Importação da fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Variáveis CSS para gerenciamento de cores e tamanhos */
+:root {
+    --color-primary: #007BFF; /* Azul para confiança e ação */
+    --color-secondary: #28A745; /* Verde para crescimento e esperança */
+    --color-dark: #343A40;
+    --color-light: #F8F9FA;
+    --color-white: #FFFFFF;
+    --max-width: 1200px;
+}
+
+/* ---------------------------------- */
+/* Estilos Base e Reset (Mobile-First) */
+/* ---------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px; /* Base para rem */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    line-height: 1.6;
+}
+
+/* Acessibilidade: Foco no teclado */
+:focus {
+    outline: 3px solid var(--color-secondary);
+    outline-offset: 2px;
+}
+
+/* Links */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-dark);
+}
+
+/* Headings (Hierarquia Lógica) */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    margin-bottom: 0.8em;
+    line-height: 1.2;
+}
+
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.3rem; }
+h4 { font-size: 1.1rem; }
+
+p {
+    margin-bottom: 1em;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+/* Container principal para centralizar conteúdo */
+.container {
+    padding: 2rem 1rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* ---------------------------------- */
+/* Header e Navegação */
+/* ---------------------------------- */
+header {
+    background-color: var(--color-white);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #E9ECEF;
+    text-align: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+header .logo img {
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+header .logo h1 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    gap: 1.5rem;
+}
+
+nav ul a {
+    font-weight: 600;
+    color: var(--color-dark);
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul a:hover,
+nav ul a[aria-current="page"] {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+}
+
+/* ---------------------------------- */
+/* Componentes de Ação e Botões */
+/* ---------------------------------- */
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    color: var(--color-white);
+}
+
+.primary-btn {
+    background-color: var(--color-secondary);
+}
+
+.primary-btn:hover {
+    background-color: #1e7e34;
+}
+
+/* ---------------------------------- */
+/* Seções Específicas */
+/* ---------------------------------- */
+.hero {
+    background-color: var(--color-white);
+    padding: 3rem 1rem;
+    text-align: center;
+    border-bottom: 5px solid var(--color-primary);
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 2rem;
+    object-fit: cover;
+}
+
+.dark-bg {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.dark-bg a {
+    color: var(--color-secondary);
+}
+
+/* Cards (Missão/Valores/Projetos) */
+.cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: var(--color-white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.details-link {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+/* ---------------------------------- */
+/* Formulários (Cadastro e Doação) */
+/* ---------------------------------- */
+.form-section {
+    padding: 2rem 1rem;
+}
+
+.user-form {
+    background-color: var(--color-white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+fieldset {
+    border: 1px solid #CED4DA;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+legend {
+    font-weight: 700;
+    color: var(--color-primary);
+    padding: 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+input[list] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Estilização para validação nativa */
+input:not(:focus):invalid:required {
+    border-color: #DC3545; /* Vermelho para erro */
+}
+
+input:valid {
+    border-color: var(--color-secondary); /* Verde para sucesso */
+}
+
+/* Estilização do formulário de Doação (Radios e Number) */
+.doacao-form fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    border: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.doacao-form legend {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+}
+
+.doacao-form label {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 400;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.doacao-form input[type="radio"] {
+    display: none;
+}
+
+.doacao-form input[type="radio"]:checked + label {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 600;
+}
+
+.doacao-form input[type="number"] {
+    max-width: 150px;
+    text-align: center;
+}
+
+/* ---------------------------------- */
+/* Footer */
+/* ---------------------------------- */
+footer {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+footer .social-links {
+    margin-top: 0.5rem;
+}
+
+footer a {
+    color: var(--color-light);
+    margin: 0 0.5rem;
+    text-decoration: underline;
+}
+
+/* ---------------------------------- */
+/* Media Queries (Layout Responsivo) */
+/* ---------------------------------- */
+
+/* Para Tablets e Telas Médias (min-width: 600px) */
+@media (min-width: 600px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    header .logo {
+        margin-bottom: 0;
+    }
+
+    /* Layout de 2 colunas para cards */
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+
+    .voluntario-info {
+        display: flex;
+        justify-content: space-around;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .voluntario-info article {
+        max-width: 45%;
+    }
+}
+
+/* Para Desktops (min-width: 992px) */
+@media (min-width: 992px) {
+    .container {
+        padding: 4rem 2rem;
+    }
+
+    .hero {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5rem 2rem;
+    }
+
+    .hero h2, .hero p, .hero .cta-button {
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .hero-image {
+        max-width: 500px;
+        margin-top: 0;
+    }
+
+    /* Formulário: Layout de 2 colunas */
+    .user-form fieldset {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem 2rem;
+    }
+
+    .user-form fieldset:nth-child(1) .form-group:first-child {
+        grid-column: 1 / 3; /* Nome Completo em linha inteira */
+    }
+}
