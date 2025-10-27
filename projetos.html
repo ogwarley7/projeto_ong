@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos e Como Ajudar - ONG Esperança Digital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Conheça os projetos sociais, descubra como ser voluntário e as formas de doação para a ONG.">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/images/logo-ong.png" alt="Logo ONG Esperança Digital">
+            <h1>Esperança Digital</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="todos-projetos" class="container">
+            <h2>Nossos Projetos de Impacto Social</h2>
+            <p class="subtitle">Cada iniciativa é um passo em direção a um futuro mais justo e digitalmente inclusivo.</p>
+            
+            <div class="cards-grid">
+                <article class="card project-card">
+                    <img src="assets/images/projeto1.jpg" alt="Pessoas aprendendo em uma sala de aula de informática">
+                    <h3>Inclusão Digital para Idosos</h3>
+                    <p>Aulas semanais de informática básica, segurança on-line e uso de aplicativos essenciais.</p>
+                    <a href="#" class="details-link">Ver Detalhes</a>
+                </article>
+                <article class="card project-card">
+                    <img src="assets/images/projeto2.jpg" alt="Jovens em um workshop de programação">
+                    <h3>Code Future (Jovens)</h3>
+                    <p>Capacitação em programação front-end e design UX/UI para adolescentes de baixa renda.</p>
+                    <a href="#" class="details-link">Ver Detalhes</a>
+                </article>
+                <article class="card project-card">
+                    <img src="assets/images/projeto3.jpg" alt="Entrega de tablets e computadores recondicionados">
+                    <h3>Hardware para Todos</h3>
+                    <p>Recondicionamento e doação de equipamentos de informática para escolas e famílias carentes.</p>
+                    <a href="#" class="details-link">Ver Detalhes</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="voluntariado" class="container dark-bg">
+            <h2>Seja um Voluntário Digital</h2>
+            <p>Se você tem paixão por tecnologia e quer compartilhar seu conhecimento, junte-se a nós!</p>
+            <a href="cadastro.html" class="cta-button">Quero Ser Voluntário</a>
+
+            <div class="voluntario-info">
+                <article>
+                    <h4>Oportunidades</h4>
+                    <p>Professor de informática, mentor de projetos, suporte técnico ou tradutor de conteúdo.</p>
+                </article>
+                <article>
+                    <h4>Requisitos</h4>
+                    <p>Acima de 18 anos, disponibilidade mínima de 4 horas/mês e muita vontade de ajudar.</p>
+                </article>
+            </div>
+        </section>
+        
+        <section id="doacao" class="container">
+            <h2>Como Doar e Apoiar</h2>
+            <p class="subtitle">Sua doação garante a continuidade dos projetos e a compra de novos equipamentos.</p>
+            <form action="#" method="get" class="doacao-form">
+                <fieldset>
+                    <legend>Escolha o Valor da Sua Doação</legend>
+                    <input type="radio" id="doacao1" name="valor" value="50" required>
+                    <label for="doacao1">R$ 50,00</label>
+
+                    <input type="radio" id="doacao2" name="valor" value="100">
+                    <label for="doacao2">R$ 100,00</label>
+                    
+                    <input type="radio" id="doacao3" name="valor" value="personalizado">
+                    <label for="doacao3">Outro Valor</label>
+
+                    <input type="number" name="outro_valor" placeholder="R$ 200,00" min="10" step="10" aria-label="Digite outro valor para doação">
+                </fieldset>
+                <button type="submit" class="cta-button primary-btn">Realizar Doação</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ONG Esperança Digital. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="#" target="_blank" aria-label="Link para o Facebook">Facebook</a>
+            <a href="#" target="_blank" aria-label="Link para o Instagram">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
